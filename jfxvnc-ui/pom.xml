@@ -26,6 +26,15 @@
 			<build>
 				<plugins>
 					<plugin>
+					    <groupId>com.excelsiorjet</groupId>
+					    <artifactId>excelsior-jet-maven-plugin</artifactId>
+					    <version>0.1.0</version>
+					    <configuration>
+					        <mainClass>${app.main.class}</mainClass>
+							<hideConsole>true</hideConsole>
+					    </configuration>
+					</plugin>
+					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-resources-plugin</artifactId>
 						<version>2.7</version>
