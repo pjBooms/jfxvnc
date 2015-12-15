@@ -28,10 +28,12 @@
 					<plugin>
 					    <groupId>com.excelsiorjet</groupId>
 					    <artifactId>excelsior-jet-maven-plugin</artifactId>
-					    <version>0.1.0</version>
+					    <version>0.2.0</version>
 					    <configuration>
 					        <mainClass>${app.main.class}</mainClass>
 							<hideConsole>true</hideConsole>
+							<icon>${project.basedir}/src/main/deploy/package/windows/jfxvnc.ico</icon>
+							<packaging>excelsior-installer</packaging>
 					    </configuration>
 					</plugin>
 					<plugin>
