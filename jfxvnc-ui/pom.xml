@@ -28,14 +28,22 @@
 					<plugin>
 					    <groupId>com.excelsiorjet</groupId>
 					    <artifactId>excelsior-jet-maven-plugin</artifactId>
-					    <version>0.4.0</version>
+					    <version>0.5.0</version>
 					    <configuration>
 					        <mainClass>${app.main.class}</mainClass>
-						<hideConsole>true</hideConsole>
-						<icon>${project.basedir}/src/main/deploy/package/windows/jfxvnc.ico</icon>
-						<packaging>excelsior-installer</packaging>
-                                                <globalOptimizer>true</globalOptimizer>
-					    </configuration>
+							<hideConsole>true</hideConsole>
+							<icon>${project.basedir}/src/main/deploy/package/windows/jfxvnc.ico</icon>
+							<packaging>native-bundle</packaging>
+							<osxBundleConfiguration>
+								<icon>${project.basedir}/src/main/deploy/package/macosx/jfxvnc.icns</icon>
+							</osxBundleConfiguration>
+							<javaRuntimeSlimDown>
+								<detachedBaseURL>http://www.excelsior-usa.com/download/jet/maven</detachedBaseURL>
+								<detachComponents>
+									<param>all</param>
+								</detachComponents>
+							</javaRuntimeSlimDown>
+						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
